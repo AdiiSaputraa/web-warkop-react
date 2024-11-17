@@ -1,0 +1,320 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --navbar-color: rgba(255, 255, 255, 0);
+    --secondary-color: #F2EAD3;
+    --color-text: #1F2544;
+    --primary-color: #3E3232;
+    --navbaar-color-text: #030637;
+}
+
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    transition: all 0.2s ease;
+    z-index: 999;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+}
+
+.navbar.class-active {
+    background-color: var(--navbar-color);
+    padding: 20px 0 20px 0;  
+    /* border-bottom: 1px solid; */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar .nav-link a {
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    font-weight: 500;
+    color: var(--navbaar-color-text);
+}
+
+.navbar .nav-link a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar .nav-link .active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    
+}
+/* Header */
+header {
+    background: linear-gradient(45deg, #00FF9C, #004D40);
+}
+/* Header */
+
+/* Homepage header */
+.homepage .header-box{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.homepage .header-box h1 {
+    --animate-delay: 0.6s
+}
+.homepage .header-box h1 span {
+    font-weight: 700;
+}
+
+.homepage .header-box p {
+    line-height: 2;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.homepage .header-box img {
+    width: 100%;
+}
+
+.homepage .header-box button {
+    padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.homepage .header-box button:hover {
+    color: #e8e8e8;
+}
+
+.homepage .header-box button:hover::before {
+    width: 100%;
+}
+
+.homepage .header-box button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+@media screen and (max-width: 992px) {
+    .homepage .header-box {
+        padding-top: 8rem;
+    }
+    .homepage .header-box img {
+        width: 400px;
+        display: block;
+        margin-inline: auto;
+    }
+}
+@media screen and (max-width: 575px){
+    .homepage .header-box h1 {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 475px){
+    .homepage .header-box h1 {
+        font-size: 2.4rem;
+    }
+    .homepage .header-box p {
+        font-size: 14px;
+    }
+    .homepage .header-box img {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 375px){
+    .homepage .header-box h1 {
+        font-size: 2rem;
+    }
+    .homepage .header-box p{
+        font-size: 12px;
+    }
+}
+/* Homepage header */
+
+/* menu home */
+.homepage .kelas {
+    background: #e8e8e8;
+    padding-bottom: 100px;
+}
+
+.homepage .kelas .row:nth-child(1){
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.homepage .kelas .row:nth-child(1) h1,
+.homepage .kelas .row:nth-child(1) p
+{
+    color: var(--color-text);
+}
+
+.homepage .kelas .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding-inline: 10px;
+}
+
+.homepage .kelas .row:nth-child(2) img {
+    height: 200px;
+}
+
+.homepage .kelas .row:nth-child(2) .col{
+    background: rgb(19, 204, 108);
+    padding: 12px;
+}
+
+.homepage .kelas .row:nth-child(2) .stars {
+    color: gold;
+}
+
+.homepage .kelas .row:nth-child(2) h5{
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.homepage .kelas .row:nth-child(3) {
+    padding-top: 100px;
+}
+/* menu home */
+
+/* footer */
+.footer {
+    width: 100%;
+    min-height: 60vh;
+}
+
+.footer .row:nth-child(1) .col:nth-child(1) h3{
+    color: var(--color-text);
+}
+
+.footer .row:nth-child(1) .col:nth-child(1) .desc{
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer .no a,
+.footer .mail a{
+    display: flex;
+    align-items: center;
+    color: black;
+    column-gap: 5px;
+}
+
+.footer .no:hover a,
+.footer .mail:hover a{
+    color: #00FF9C;
+}
+
+.footer .row:nth-child(1) .col:nth-child(2){
+    gap: 10px;
+}
+
+.footer .row:nth-child(1) .col:nth-child(2) a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .row:nth-child(1) .col:nth-child(2) a:hover{
+    color: #00FF9C;
+}
+
+.footer .social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.footer .social i{
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer .social i:hover{
+    color: #00FF9C;
+}
+
+.footer .row:nth-child(2){
+    margin-top: 100px;
+}
+/* footer */
+
+
+.menu-pages .menu {
+    background: #00FF9C;
+    
+}
+
+.menu-pages .menu .row:nth-child(1) {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.menu-pages .menu .row:nth-child(1) h1 {
+    color: var(--color-text);
+    font-size: 3rem;
+}
+
+.menu-pages .menu .row:nth-child(1) p {
+    color: var(--color-text);
+}
+
+.menu-pages .menu .row:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding-inline: 10px;
+}
+
+.menu-pages .menu .row:nth-child(2) img {
+    height: 200px;
+}
+
+.menu-pages .menu .row:nth-child(2) .col{
+    background: rgb(19, 204, 108);
+    padding: 12px;
+}
+
+.menu-pages .menu .row:nth-child(2) .stars {
+    color: gold;
+}
+
+.menu-pages .menu .row:nth-child(2) h5{
+    color: var(--color-text);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.about-pages {
+    background: whitesmoke;
+}
+
+.about-pages .row:nth-child(1){
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
